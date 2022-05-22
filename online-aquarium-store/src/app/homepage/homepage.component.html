@@ -1,0 +1,16 @@
+<div class="background-gif" *ngIf="!loginbuttonClicked">
+    <div style="display: flex; flex-direction: column; align-items:center;" >
+        <div style="margin-top:20%;"><button id="basic" type="button" color="primary" mat-raised-button
+                (click)="businessLogin()">
+                Business Login
+            </button> </div>
+        <div style="margin-top:5px">
+            <button id="basic" type="button" color="accent" mat-raised-button (click)="customerLogin()">
+                Customer Login
+            </button>
+        </div>
+    </div>
+</div>
+
+<app-business-login *ngIf="businessLoginClicked"></app-business-login>
+<app-user-login *ngIf="customerLoginClicked"></app-user-login>
