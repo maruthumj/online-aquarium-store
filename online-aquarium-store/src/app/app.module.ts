@@ -9,7 +9,9 @@ import { UserLoginComponent } from './user-login/user-login.component';
 import { BusinessLoginComponent } from './business-login/business-login.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-
+import { environment } from "src/environments/environment";
+import { AngularFireModule } from '@angular/fire';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,8 +26,11 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     BrowserAnimationsModule,
     MatButtonModule,
     MatInputModule,
-    AppRoutingModule
-  ],
+    AppRoutingModule,
+     FireModule.initializeApp(environment.firebaseConfig),
+    FirestoreModule
+    ],
+  
   providers: [],
   bootstrap: [AppComponent]
 })
